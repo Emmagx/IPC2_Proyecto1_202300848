@@ -39,13 +39,7 @@ class Matriz:
             nodo = nodo.derecha
         return nodo
         
-    def imprimir_matriz(self):
-        fila = self.cabeza
-        while fila:
-            nodo = fila
-            while nodo:
-                print(nodo.valor, end=" ")
-                nodo = nodo.derecha
-            print()
-            fila = fila.abajo
+    def imprimir_dato (self):
+        for fila in self.datos:
+            print(fila)
         

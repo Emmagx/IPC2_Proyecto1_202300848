@@ -1,3 +1,4 @@
+from lista_circular import ListaCircular
 class Menu:
     def __init__(self):
         self.lista_matrices = ListaCircular()
@@ -36,11 +37,9 @@ class Menu:
 
     def procesar_archivo(self):
         print("Procesando archivo...")
-        # Implementar la lógica para procesar la matriz
 
     def escribir_archivo(self):
         print("Escribiendo archivo de salida...")
-        # Implementar la lógica para escribir la matriz reducida
 
     def mostrar_datos_estudiante(self):
         print("Nombre: [Tu nombre]")

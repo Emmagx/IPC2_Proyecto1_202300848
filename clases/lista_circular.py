@@ -62,7 +62,3 @@ class ListaCircular:
             if actual == self.cabeza:
                 break
 
-# Ejemplo de uso:
-# lista = ListaCircular()
-# lista.agregar_matriz(matriz)
-# lista.mostrar_matrices()

@@ -14,7 +14,3 @@ class Grafo:
                 if x < self.matriz.n - 1:
                     dot.edge(f'{x},{y}', f'{x+1},{y}')
         dot.render(nombre_archivo)
-
-# Ejemplo de uso:
-# grafo = Grafo(matriz)
-# grafo.generar_grafo("mi_grafo")
