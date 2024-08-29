@@ -70,7 +70,9 @@ class Menu:
         else:
             matriz = matrices_reducidas.obtener(seleccion - len(matrices_originales))
 
-        grafo = Grafo()
-        grafo.generar_grafo(matriz)  # No hay necesidad de un lector XML aquí
-        grafo.guardar_grafo(matriz.nombre)
-        print(f"Grafo de la matriz '{matriz.nombre}' generado con éxito.")
+        # Crear y mostrar el grafo
+        grafo = Grafo(matriz)
+        #grafo.crear_nodos_matriz()  # Genera los nodos y bordes del grafo
+        grafo.mostrar_grafo()       # Renderiza y muestra el grafo en una ventana gráfica
+
+        print(f"Grafo de la matriz '{matriz.nombre}' generado y guardado con éxito.")
