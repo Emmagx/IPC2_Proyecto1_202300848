@@ -1,0 +1,53 @@
+digraph {
+	rankdir=TB
+	Ejemplo2 [shape=ellipse style=bold]
+	m [label="m = 4" color=blue shape=ellipse style=bold]
+	n [label="n = 4" color=blue shape=ellipse style=bold]
+	Ejemplo2 -> m
+	Ejemplo2 -> n
+	"Fila 1" [label="Fila 1" shape=ellipse style=bold]
+	Ejemplo2 -> "Fila 1"
+	"Fila 1_dato_1" [label=3 shape=ellipse]
+	"Fila 1" -> "Fila 1_dato_1"
+	"Fila 1_dato_2" [label=4 shape=ellipse]
+	"Fila 1_dato_1" -> "Fila 1_dato_2"
+	"Fila 1_dato_3" [label=1 shape=ellipse]
+	"Fila 1_dato_2" -> "Fila 1_dato_3"
+	"Fila 1_dato_4" [label=0 shape=ellipse]
+	"Fila 1_dato_3" -> "Fila 1_dato_4"
+	"Fila 2" [label="Fila 2" shape=ellipse style=bold]
+	Ejemplo2 -> "Fila 2"
+	"Fila 2_dato_1" [label=0 shape=ellipse]
+	"Fila 2" -> "Fila 2_dato_1"
+	"Fila 2_dato_2" [label=0 shape=ellipse]
+	"Fila 2_dato_1" -> "Fila 2_dato_2"
+	"Fila 2_dato_3" [label=5 shape=ellipse]
+	"Fila 2_dato_2" -> "Fila 2_dato_3"
+	"Fila 2_dato_4" [label=4 shape=ellipse]
+	"Fila 2_dato_3" -> "Fila 2_dato_4"
+	"Fila 3" [label="Fila 3" shape=ellipse style=bold]
+	Ejemplo2 -> "Fila 3"
+	"Fila 3_dato_1" [label=3 shape=ellipse]
+	"Fila 3" -> "Fila 3_dato_1"
+	"Fila 3_dato_2" [label=0 shape=ellipse]
+	"Fila 3_dato_1" -> "Fila 3_dato_2"
+	"Fila 3_dato_3" [label=1 shape=ellipse]
+	"Fila 3_dato_2" -> "Fila 3_dato_3"
+	"Fila 3_dato_4" [label=4 shape=ellipse]
+	"Fila 3_dato_3" -> "Fila 3_dato_4"
+	"Fila 4" [label="Fila 4" shape=ellipse style=bold]
+	Ejemplo2 -> "Fila 4"
+	"Fila 4_dato_1" [label=1 shape=ellipse]
+	"Fila 4" -> "Fila 4_dato_1"
+	"Fila 4_dato_2" [label=0 shape=ellipse]
+	"Fila 4_dato_1" -> "Fila 4_dato_2"
+	"Fila 4_dato_3" [label=1 shape=ellipse]
+	"Fila 4_dato_2" -> "Fila 4_dato_3"
+	"Fila 4_dato_4" [label=5 shape=ellipse]
+	"Fila 4_dato_3" -> "Fila 4_dato_4"
+	{
+		rank=same
+		m
+		n
+	}
+}
