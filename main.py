@@ -6,7 +6,8 @@ while True:
     print("2. Procesar archivo")
     print("3. Escribir archivo salida")
     print("4. Datos del estudiante")
-    print("5. Salir")
+    print("5. Generar grafica")
+    print("6. Salir")
     opcion = input("Seleccione una opción: ")
 
     if opcion == "1":
@@ -23,6 +24,10 @@ while True:
         print("Carnet 202300848")
         
     elif opcion == "5":
+        print("Empezando a generar grafo")
+        menu.generar_grafo()
+        
+    elif opcion == "6":
         break
     else:
         print("Opción no válida. Inténtelo de nuevo.")
