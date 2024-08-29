@@ -27,7 +27,7 @@ class AnalizadorMatrices:
                 suma = sum(fila.obtener(j) for fila in [filas.obtener(k) for k in range(len(filas))])
                 nueva_fila.agregar(suma)
             matriz_reducida.filas.insertar(i, nueva_fila)
-            # Imprimir la nueva fila reducida para verificar
+            
             print(f"Fila reducida {i}: {nueva_fila.mostrar()}")
             i += 1
         self.matrices_reducidas.agregar(matriz_reducida)

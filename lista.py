@@ -12,13 +12,13 @@ class ListaEnlazada:
         nuevo_nodo = Nodo(dato)
         if not self.cabeza:
             self.cabeza = nuevo_nodo
-            nuevo_nodo.siguiente = self.cabeza  # Apunta a sí mismo
+            nuevo_nodo.siguiente = self.cabeza  
         else:
             actual = self.cabeza
-            while actual.siguiente != self.cabeza:  # Cambia el límite del bucle para la lista circular
+            while actual.siguiente != self.cabeza: 
                 actual = actual.siguiente
             actual.siguiente = nuevo_nodo
-            nuevo_nodo.siguiente = self.cabeza  # Mantén la circularidad
+            nuevo_nodo.siguiente = self.cabeza 
         self.tamaño += 1
 
     def obtener(self, indice):
@@ -30,7 +30,7 @@ class ListaEnlazada:
         while contador < indice:
             actual = actual.siguiente
             contador += 1
-        return actual.dato  # Devuelve el dato, no el nodo completo
+        return actual.dato 
 
     def eliminar(self, indice):
         if indice < 0 or indice >= self.tamaño:
@@ -38,7 +38,7 @@ class ListaEnlazada:
         
         if indice == 0:
             if self.tamaño == 1:
-                self.cabeza = None  # Lista se vuelve vacía
+                self.cabeza = None
             else:
                 actual = self.cabeza
                 while actual.siguiente != self.cabeza:

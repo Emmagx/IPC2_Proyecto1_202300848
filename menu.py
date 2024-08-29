@@ -20,8 +20,6 @@ class Menu:
             return
         self.analizador_matrices = AnalizadorMatrices(self.lector_xml.obtener_matrices())
         self.analizador_matrices.procesar()
-        
-        # Verificar el contenido de matrices reducidas antes de proceder
         matrices_reducidas = self.analizador_matrices.obtener_matrices_reducidas()
         for i in range(len(matrices_reducidas)):
             matriz = matrices_reducidas.obtener(i)
@@ -72,7 +70,5 @@ class Menu:
 
         # Crear y mostrar el grafo
         grafo = Grafo(matriz)
-        #grafo.crear_nodos_matriz()  # Genera los nodos y bordes del grafo
-        grafo.mostrar_grafo()       # Renderiza y muestra el grafo en una ventana gráfica
-
+        grafo.mostrar_grafo()
         print(f"Grafo de la matriz '{matriz.nombre}' generado y guardado con éxito.")
