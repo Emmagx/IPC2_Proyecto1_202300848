@@ -4,8 +4,8 @@ class Grafo:
     def __init__(self, matriz):
         self.matriz = matriz
         self.grafo = Digraph(format='png')
-        self.grafo.attr(rankdir='TB')  # Configurar dirección del grafo de arriba hacia abajo
-        self.crear_nodos_matriz()  # Crear nodos y aristas al inicializar
+        self.grafo.attr(rankdir='TB')  
+        self.crear_nodos_matriz() 
 
     def crear_nodos_matriz(self):
         # Nodo raíz
@@ -29,22 +29,17 @@ class Grafo:
                 nodo_id = f'{fila_id}_dato_{j+1}'
                 self.grafo.node(nodo_id, str(dato), shape='ellipse')
 
-                
                 if j == 0:
-                    
                     self.grafo.edge(fila_id, nodo_id)
                 else:
-                    
                     nodo_anterior_id = f'{fila_id}_dato_{j}'
                     self.grafo.edge(nodo_anterior_id, nodo_id)
 
-        
         with self.grafo.subgraph() as s:
             s.attr(rank='same')
             s.node('m')
             s.node('n')
 
-    def mostrar_grafo(self):
+    def guardar_grafo(self):
+        self.grafo.render(f'grafo_{self.matriz.nombre}', format='png', cleanup=True)
         
-        self.grafo.render('grafo_matriz', format='png', cleanup=False)
-        self.grafo.view()
