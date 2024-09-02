@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+from xml.dom import minidom
 
 class EscritorXML:
     def __init__(self, matrices_reducidas):
@@ -21,6 +22,9 @@ class EscritorXML:
                     dato_element = ET.SubElement(matriz_element, "dato", x=str(x+1), y=str(y+1))
                     dato_element.text = str(dato)
 
-        tree = ET.ElementTree(root)
-        tree.write(archivo_salida, encoding="utf-8", xml_declaration=True)
+        
+        xml_str = minidom.parseString(ET.tostring(root)).toprettyxml(indent="    ")
 
+        
+        with open(archivo_salida, "w", encoding="utf-8") as f:
+            f.write(xml_str)
