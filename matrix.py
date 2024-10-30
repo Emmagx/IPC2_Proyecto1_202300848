@@ -42,5 +42,6 @@ class Matriz:
         for i in range(self.n):
             fila = self.filas.obtener(i) 
             print(fila.mostrar()) 
+            
 
 
